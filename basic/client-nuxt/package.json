@@ -1,0 +1,13 @@
+{
+  "name": "nuxt",
+  "description": "nuxt as client",
+  "repository": "https://github.com/xxx.git",
+  "scripts": {
+    "start": "nuxt"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "nuxt": "^1.0.0-rc5"
+  },
+  "license": "MIT"
+}
