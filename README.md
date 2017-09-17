@@ -2,6 +2,8 @@
 
 > A basic concept using Nuxt and Slim to decouple controllers and views in a PHP application.
 
+Read the post [here](https://coderwall.com/p/gyxbca/decoupling-the-view-and-controller-in-your-php-application-introducing-nuxt) about this repository.
+
 ## Nuxt Setup
 
 ``` bash
