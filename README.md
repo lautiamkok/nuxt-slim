@@ -29,17 +29,17 @@ $ php -S 0.0.0.0:8181 -t public
 
 Then, access it at http://localhost:8181/
 
-## Docs
+## Dependencies
 
 1. Node
 
 * [Nuxt.js](https://nuxtjs.org/)
-* [Vue.js](https://vuejs.org/)
+* [axios](https://github.com/mzabriskie/axios)
 
 2. PHP
 
 * [Slim](https://www.slimframework.com/docs/)
-* [Monolog](https://github.com/Seldaek/monolog) - Sends your logs to files, sockets, inboxes, databases and various web services
+* [Monolog](https://github.com/Seldaek/monolog)
 
 ## Notes
 
