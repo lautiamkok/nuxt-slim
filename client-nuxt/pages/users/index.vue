@@ -15,7 +15,6 @@
 
 <script>
 import axios from '~/plugins/axios'
-// import store from '~/store'
 
 export default {
   async asyncData () {
