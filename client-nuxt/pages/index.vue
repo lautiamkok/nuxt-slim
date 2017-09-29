@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ message }}</h1>
-    <p>This is Nuxt + Slim.</p>
+    <p>This is Nuxt + Koa.</p>
   </div>
 </template>
 
@@ -11,11 +11,12 @@ import axios from '~/plugins/axios'
 export default {
   async asyncData () {
     let {data} = await axios.get('/')
-    return data
+    console.log(data.data)
+    return data.data
   },
   head () {
     return {
-      title: 'Nuxt + Slim'
+      title: 'Nuxt + Koa'
     }
   }
 }

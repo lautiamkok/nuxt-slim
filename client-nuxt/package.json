@@ -3,7 +3,10 @@
   "description": "nuxt as client",
   "repository": "https://github.com/xxx.git",
   "scripts": {
-    "start": "nuxt"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "axios": "^0.16.2",

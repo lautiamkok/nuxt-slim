@@ -16,17 +16,34 @@ use \Psr\Http\Message\ResponseInterface as Response;
 chdir(dirname(__DIR__));
 require 'bootstrap.php';
 
-// Get an instance of Slim.
-$app = new \Slim\App();
+//Create Your container
+$container = new \Slim\Container();
 
-$app->get('/', function (Request $request, Response $response, $args) {
-    $data = [
-        "status" => 200,
-        "message" => "Hello world!"
-    ];
-    $response->getBody()->write(json_encode($data));
-    return $response->withHeader('Content-type', 'application/json');
+// Get an instance of Slim.
+$app = new \Slim\App($container);
+
+// Setting up CORS.
+// https://www.slimframework.com/docs/cookbook/enable-cors.html
+$app->options('/{routes:.+}', function (Request $request, Response $response, $args) {
+    return $response;
 });
+
+$app->add(function (Request $request, Response $response, $next) {
+    $response = $next($request, $response);
+    return $response
+        ->withHeader('Access-Control-Allow-Origin', 'http://localhost:3000')
+        ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
+        ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+});
+
+// Register dependencies.
+require 'dependencies.php';
+
+// Register middlewares.
+require 'middlewares.php';
+
+// Register routes.
+require 'routes.php';
 
 // Run the application!
 $app->run();
