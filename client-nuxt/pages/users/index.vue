@@ -4,7 +4,6 @@
       USERS
     </h1>
     <ul class="users">
-      <!-- <li v-for="(user, index) in $store.state.users" :key="index" class="user"> -->
       <li v-for="(user, index) in users" :key="index" class="user">
         <nuxt-link :to="'users/' + index">
           {{ user.name }}
@@ -25,11 +24,6 @@ export default {
     console.log(users)
     return { users: users }
   },
-  // // Or using store.
-  // async fetch ({ store, params }) {
-  //   let { data } = await axios.get('/users')
-  //   store.commit('setUsers', data.data)
-  // },
   head () {
     return {
       title: 'Users'
