@@ -2,7 +2,7 @@
 
 > A basic concept using Nuxt and Slim to decouple controllers and views in a PHP application.
 
-Read the post [here](https://coderwall.com/p/gyxbca/decoupling-the-view-and-controller-in-your-php-application-introducing-nuxt) about this repository. Also the post [here](https://www.codementor.io/lautiamkok/creating-a-nuxt-application-with-koa-express-and-slim-cfqjp0ylw).
+Read the post [here](https://www.codementor.io/lautiamkok/creating-a-nuxt-application-with-koa-express-and-slim-cfqjp0ylw) about this repository.
 
 ## Nuxt Setup
 
